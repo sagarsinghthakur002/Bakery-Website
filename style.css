@@ -4,3 +4,35 @@
     box-sizing: border-box;
 }
 
+:root {
+    --header-height: 3.5rem;
+
+            /* color */
+
+    --first-color: hsl(28, 88%, 62%);
+    --first-color-alt: hsl(28, 84%, 58%);
+    --title-color: hsl(0, 0%, 95%);
+    --text-color: hsl(0, 0 ,75%);
+    --taxt-color-light: hsl(0, 0%, 6%);
+    --black-color: hsl(0, 0%, 6%)
+    --body-color: hsl(0, 0%, 6%);
+    --container-color: hsl(0, 0%, 10%);
+
+        /* font-size  0.5rem=8px , 1rem= 16px */
+
+    --body-font:"montserrat", sans-serif;
+    --second--font:;
+    --biggest-font-size:3rem;
+    --bigger-font-size:2rem;
+    --h1-font-size:1.5rem;
+    --h2-font-size:1.25rem;
+    --h3-font-size:1rem;
+    --normal-font-size: .9rem;
+    --small-font-size: .813rem;
+
+       /* font-weight */
+    --font-regular:400;
+    --font-semi-bold:600;
+    --font-bold:700;
+
+}
