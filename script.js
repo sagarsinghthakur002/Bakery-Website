@@ -2,34 +2,35 @@ let  manuBtn = document.getElementById("menu-btn");
 let  navbar = document.querySelector(".header .navbar");
 let  searchBtn = document.querySelector("#search-btn");
 let  searchForm = document.querySelector(".search-form");
+// let  bot = document.querySelector(".bot");
+// let  container = document.querySelector(".container");
 
 
 manuBtn.addEventListener("click", () => {
     navbar.classList.toggle("active");
-    searchForm.classList.remove("active");   
+    searchForm.classList.remove("active"); 
+    container.classList.remove("active");  
 });
 
 
 searchBtn.addEventListener("click", () => {
     searchForm.classList.toggle("active");
     navbar.classList.remove("active");
+    container.classList.remove("active");
     
 });
+
+// bot.addEventListener("click", () => {
+//     container.classList.toggle("active");
+//     navbar.classList.remove("active");
+//     searchForm.classList.remove("active");
+// });
 
 window.onscroll =()=> {
     navbar.classList.remove("active");
     searchForm.classList.remove("active");
+    container.classList.remove("active");
 }
-
-
-
-
-
-
-
-
-
-
 
 function chatbot(input) {
     let output = "";
@@ -51,17 +52,17 @@ function chatbot(input) {
         output = "Hello there! How can I help you today?";
     } else if (input.includes("how are you")) {
         output = "I am doing great, thank you for asking! How about you?";
-    }else if (input.includes(" bakery menu") || input.includes("can i have menu ") ) {
-        output = " yes for menu , plz type menu ";
+    }else if (input.includes("i nedd manu ") || input.includes("can i have coffee ") ) {
+        output = "plz type menu ";
     } else if (input.includes("what is your name")) {
         output = "My name is Chatbot, but you can call me Chat. What is your name?";
-    } else if (input.includes("")) {
+    } else if (input.includes("what is your favorite coffe")) {
         output = "My favorite coffee is cappuccino, but I also like mocha  and frappe.";
     } else if (input.includes("what is your favorite food")) {
         output = "My favorite food is pizza, but I also like tacos and sushi.";
     }  else if (input.includes("can you h")) {
     } else if (input.includes("location") || input.includes("where are you located")) {
-            output = "We are located at kalimati, kathmandu. Our contact number is +977 9828711925. We  are open from 8 AM to 8 PM.";
+            output = "We are located at Galli, Lalitpur. Our contact number is +977 9828711925. We  are open from 8 AM to 8 PM.";
     }
     else if (input.includes("location map") || input.includes("map") ) {
         output = "We are located at Galli, Lalitpur. click to see the location .";
