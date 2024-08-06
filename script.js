@@ -2,8 +2,8 @@ let  manuBtn = document.getElementById("menu-btn");
 let  navbar = document.querySelector(".header .navbar");
 let  searchBtn = document.querySelector("#search-btn");
 let  searchForm = document.querySelector(".search-form");
-// let  bot = document.querySelector(".bot");
-// let  container = document.querySelector(".container");
+let  bot = document.querySelector(".bot");
+let  container = document.querySelector(".container");
 
 
 manuBtn.addEventListener("click", () => {
@@ -20,11 +20,11 @@ searchBtn.addEventListener("click", () => {
     
 });
 
-// bot.addEventListener("click", () => {
-//     container.classList.toggle("active");
-//     navbar.classList.remove("active");
-//     searchForm.classList.remove("active");
-// });
+bot.addEventListener("click", () => {
+    container.classList.toggle("active");
+    navbar.classList.remove("active");
+    searchForm.classList.remove("active");
+});
 
 window.onscroll =()=> {
     navbar.classList.remove("active");
@@ -34,62 +34,54 @@ window.onscroll =()=> {
 
 function chatbot(input) {
     let output = "";
-    const menu = {
-        "oreo latte": "Oreo Latte: Rs 250",
-        "espresso": "Espresso: Rs 95",
-        "doppio": "Doppio: Rs 120",
-        "latte": "Latte: Rs 175",
-        "cappuccino": "Cappuccino: Rs 175",
-        "americano": "Americano: Rs 135",
-        "frappe": "Frappe: Rs 325",
-        "hot chocolate": "Hot Chocolate: Rs 195",
-        "blended mocha": "Blended Mocha: Rs 225",
-        "ice latte": "Ice Latte: Rs 195",
-        "iced americano": "Iced Americano: Rs 165",
-        "mocha madness": "Mocha Madness: Rs 250"
+    const bakeryMenu = {
+        "croissant": "Croissant: Rs 50",
+        "muffin": "Muffin: Rs 80",
+        "baguette": "Baguette: Rs 100",
+        "brownie": "Brownie: Rs 70",
+        "donut": "Donut: Rs 60",
+        "cupcake": "Cupcake: Rs 90"
     };
+
+    input = input.toLowerCase();
+
     if (input.includes("hello") || input.includes("hi") || input.includes("hey") || input.includes("hlo")) {
         output = "Hello there! How can I help you today?";
     } else if (input.includes("how are you")) {
         output = "I am doing great, thank you for asking! How about you?";
-    }else if (input.includes("i nedd manu ") || input.includes("can i have coffee ") ) {
-        output = "plz type menu ";
+    } else if (input.includes("i need menu") || input.includes("can i have coffee")) {
+        output = "Please type 'menu' to see our coffee offerings.";
     } else if (input.includes("what is your name")) {
         output = "My name is Chatbot, but you can call me Chat. What is your name?";
-    } else if (input.includes("what is your favorite coffe")) {
-        output = "My favorite coffee is cappuccino, but I also like mocha  and frappe.";
+    } else if (input.includes("what is your favorite coffee")) {
+        output = "My favorite coffee is cappuccino, but I also like mocha and frappe.";
     } else if (input.includes("what is your favorite food")) {
         output = "My favorite food is pizza, but I also like tacos and sushi.";
-    }  else if (input.includes("can you h")) {
     } else if (input.includes("location") || input.includes("where are you located")) {
-            output = "We are located at Galli, Lalitpur. Our contact number is +977 9828711925. We  are open from 8 AM to 8 PM.";
-    }
-    else if (input.includes("location map") || input.includes("map") ) {
-        output = "We are located at Galli, Lalitpur. click to see the location .";
-}
-    else if (input.includes("your number") || input.includes("your phone number ")) {
+        output = "We are located at Galli, Lalitpur. Our contact number is +977 9828711925. We are open from 8 AM to 8 PM.";
+    } else if (input.includes("location map") || input.includes("map")) {
+        output = "We are located at Galli, Lalitpur. Click [here](#) to see the location.";
+    } else if (input.includes("your number") || input.includes("your phone number")) {
         output = "+977 9828711925";
-    } 
-    else if (input.includes("coffee menu") || input.includes("your menu") || input.includes("menu")){
-        output = `Welcome to Coffee Corner! Here is our coffee menu:
-        - Oreo Latte: Rs 250
-        - Espresso: Rs 95
-        - Doppio: Rs 120
-        - Latte: Rs 175
-        - Cappuccino: Rs 175
-        - Americano: Rs 135
-        - Frappe: Rs 325
-        - Hot Chocolate: Rs 195
-        - Blended Mocha: Rs 225
-        - Ice Latte: Rs 195
-        - Iced Americano: Rs 165
-        - Mocha Madness: Rs 250
-        . what you would you like to take sir/madam`;
-    } 
-    else {
+    } else if (input.includes("bakery menu") || input.includes("bakery items") || input.includes("bakery")) {
+        output = `Welcome to Third Eye Bakery! Here is our bakery menu:
+        - Croissant: Rs 50
+        - Muffin: Rs 80
+        - Baguette: Rs 100
+        - Brownie: Rs 70
+        - Donut: Rs 60
+        - Cupcake: Rs 90
+        What would you like to order, sir/madam?`;
+    } else {
         for (let item in menu) {
-            if (input.toLowerCase().includes(item)) {
+            if (input.includes(item)) {
                 output = menu[item];
+                break;
+            }
+        }
+        for (let item in bakeryMenu) {
+            if (input.includes(item)) {
+                output = bakeryMenu[item];
                 break;
             }
         }

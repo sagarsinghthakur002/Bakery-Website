@@ -39,13 +39,14 @@
 }
 
  .content p {
-    font-size: 1.3rem;
-    font-weight: lighter;
+    font-size: 1.9rem;
+    font-weight: 500;
     line-height: 1.8;
     padding: 1rem 0;
     color: #ebdddd;
     margin-left: 20px;
     max-width: 60rem;
+    filter: drop-shadow(10px 5px 2px #000009);
 }
 
 .content .btn {

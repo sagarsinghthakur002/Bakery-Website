@@ -6,6 +6,9 @@
     font-size: 4rem;
     margin-top: 5rem;
     margin-bottom: 2rem;
+    background-image: url("images/bg2.jpg");
+    background-size: cover;
+    background-position: center;
 
 }  
 
@@ -54,19 +57,11 @@ h1 span:hover{
 }
 
 .about .row img {
-    flex:1 1 45rem;
-}
-
-.about .row img {
-    width:auto;
+    width:30rem;
     height:auto;
 
 }
-.about .row img:hover{
-    transform: scale(1.1);
-    box-shadow: ;
 
-}
 
 .about .row .content {
     flex: 1 1 45rem;
@@ -98,15 +93,15 @@ h1 span:hover{
 }
 .btn {
     margin-top: 1rem;
-    padding: 2rem 5rem;
-    font-size: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1.9rem;
     color: #0c0c0c;
     font-weight: 600;
     background: var(--main-color);
     cursor: pointer;
     text-align: center;
     border-radius: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .btn:hover {
