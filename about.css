@@ -26,6 +26,7 @@
     margin-top: 70px;
 }
 
+
 .about h1 {
     font-size: 45px;
 }
@@ -108,19 +109,12 @@ h1 span:hover{
     background:white;
 }
 
-@media (max-width: 991px) {
-    .about .row img {
-        height: auto;
-    }
-
-    .about .row .content {
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .heading {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        padding-bottom: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
     }
 
     .about h1 {
@@ -128,30 +122,12 @@ h1 span:hover{
     }
 
     .about .row img {
-        display: none;
+        width: 20rem;
     }
 
     .about .row .content {
+        flex: 1 1 35rem;
         padding: 1rem;
-    }
-
-    .about .row .content h3 {
-        font-size: 2.5rem;
-    }
-
-    .about .row .content p {
-        font-size: 1.4rem;
-    }
-}
-
-@media (max-width: 450px) {
-    .heading {
-        font-size: 2.5rem;
-        padding-bottom: 2.5rem;
-    }
-
-    .about h1 {
-        font-size: 25px;
     }
 
     .about .row .content h3 {
@@ -163,7 +139,83 @@ h1 span:hover{
     }
 
     .btn {
-        padding: 1rem 3rem;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        padding: 0.7rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2rem;
+        padding-bottom: 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .about h1 {
+        font-size: 30px;
+    }
+
+    .about .row img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .about .row .content {
+        flex: 1 1 100%;
+        padding: 1rem;
+    }
+
+    .about .row .content h3 {
+        font-size: 1.8rem;
+    }
+
+    .about .row .content p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1.3rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    #imgg{
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .about h1 {
+        font-size: 25px;
+    }
+
+    .about .row img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .about .row .content {
+        flex: 1 1 100%;
+        padding: 0.5rem;
+    }
+
+    .about .row .content h3 {
+        font-size: 1.5rem;
+    }
+
+    .about .row .content p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
     }
 }

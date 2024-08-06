@@ -44,15 +44,15 @@ body {
 
 
 .menu .box-container {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
+    display: flex; 
     flex-wrap: wrap;
+    gap: 1.5rem; 
     margin-left: 30px;
 }
 
 .menubg {
     background: url("images/bg1.jpg");
+    margin-top: 70px;
 }
 
 .box-container .box {
@@ -60,27 +60,20 @@ body {
     text-align: center;
     border: var(--border);
     border-radius: 20px;
-    margin-bottom: 20px;
-    margin-right: 10px;
+    margin: 70px 10px 40px 30px; 
     transition: .2s ease-in-out;
     position: relative;
-
 }
 
 .box:hover {
     transform: scale(1.1);
     background: #1e1d1d;
     border: 2px solid var(--main-color);
-
 }
 
 .box-container .box img {
-
     position: absolute;
-    top:-25%;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
+    top: -25%;
     right: 20%;
     height: 11rem;
     transition: .2s ease-in-out;
@@ -94,7 +87,6 @@ body {
     color: #FFF;
     font-size: 1.7rem;
     padding: 1rem 0;
-
 }
 
 .box-container .box .price {
@@ -102,15 +94,12 @@ body {
     font-size: 2rem;
     padding: .5rem 0;
     margin-bottom: 10px;
-
-
 }
 
 .box-container .box .price span {
     color: #FFF;
-    font-size:1rem;
+    font-size: 1rem;
     text-decoration: line-through;
-
 }
 
 .btm {
@@ -125,173 +114,8 @@ body {
 }
 
 .btm:hover {
-    background:white;
+    background: white;
 }
-
-
-  
-
-/* 
-  chat bot */
-
-
-  .container {
-    position: fixed;
-    width: 400px;
-    top: 180px;
-    right: 50px;
-    padding: 20px;
-    margin-right: 50px;
-    border-radius: 10px;
-    box-shadow: 2px 7px 29px 0px #64646f33;
-    backdrop-filter: blur(10px);
-    background-size: cover;
-    background-position: center;
-    border: 2px solid black;
-    transform: scaleY(0);
-    transform-origin: bottom;
-    transition: transform 0.2s ease-in-out;
-}
-
-.container.active {
-    transform: scaleY(1);
-}
-
-.bot {
-    cursor: pointer;
-}
-
-.title {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #eceae8;
-}
-
-.chat {
-    height: 300px;
-    overflow-y: scroll;
-    margin: 10px 0;
-    border-top: 2px solid rgb(92, 91, 89);
-    border-radius: 5px;
-    background: url("images/bg.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.message {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.message.user {
-    justify-content: flex-end;
-}
-
-.message.bot {
-    justify-content: flex-start;
-}
-
-.avatar {
-    background: url("images/chat-avter.jpg");
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 0 10px;
-}
-
-.message.user .avatar {
-    order: 2;
-    background: url("images/avtar.jpg");
-    background-size: cover;
-}
-
-.message.bot .avatar {
-    background-size: cover;
-}
-
-.text {
-    max-width: 70%;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 16px;
-    color: white;
-}
-
-.message.user .text {
-    background: #222831;
-}
-
-.message.bot .text {
-    background-color: antiquewhite;
-    color: black;
-}
-
-.input {
-    position: relative;
-    width: 95%;
-    padding: 10px;
-    border: 2px solid #cbcbce;
-    border-radius: 5px;
-    outline: none;
-    font-size: 20px;
-}
-
-.input:focus {
-    border-color: aquamarine;
-    color: #000000;
-}
-
-.button {
-    position: absolute;
-    border: none;
-    padding: 1px;
-    backdrop-filter: blur(10px);
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: .01rem;
-    margin-left: -4.0rem;
-    outline: none;
-    border-radius: 5%;
-}
-
-button i {
-    font-size: 4.5rem;
-    color: rgb(1, 10, 4);
-    border-radius: 20px;
-}
-
-button i:hover {
-    color: rgb(132, 123, 123);
-}
-
-.chat::-webkit-scrollbar {
-    width: 10px;
-}
-
-.chat::-webkit-scrollbar-thumb {
-    background-color: #000;
-    border-radius: 10px;
-}
-
-
-.bot img {
-    top: 80%;
-    right: 4%;
-    position: fixed;
-    width: 7rem;
-    border-radius: 50%;
-    transform: .2s;
-}
-
-.bot img:hover {
-    transform: scale(1.1);
-}
-
-
 
 
 @media (max-width: 1200px) {
@@ -348,3 +172,4 @@ button i:hover {
         font-size: 2rem;
     }
 }
+

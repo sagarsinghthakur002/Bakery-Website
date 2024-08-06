@@ -40,7 +40,13 @@ function chatbot(input) {
         "baguette": "Baguette: Rs 100",
         "brownie": "Brownie: Rs 70",
         "donut": "Donut: Rs 60",
-        "cupcake": "Cupcake: Rs 90"
+        "cupcake": "Cupcake: Rs 90",
+        "bun": "Bun: Rs 250",
+        "carpathian": "Carpathian: Rs 95",
+        "poster": "Poster: Rs 120",
+        "moule": "Moule: Rs 175",
+        "cake": "Cake: Rs 165",
+        "plum cake": "Plum Cake: Rs 225"
     };
 
     input = input.toLowerCase();
@@ -58,27 +64,29 @@ function chatbot(input) {
     } else if (input.includes("what is your favorite food")) {
         output = "My favorite food is pizza, but I also like tacos and sushi.";
     } else if (input.includes("location") || input.includes("where are you located")) {
-        output = "We are located at Galli, Lalitpur. Our contact number is +977 9828711925. We are open from 8 AM to 8 PM.";
+        output = "We are located at Tahachal, Kathmandu, Nepal. Our contact number is +977 980-1238675. We are open from 8 AM to 8 PM.";
     } else if (input.includes("location map") || input.includes("map")) {
-        output = "We are located at Galli, Lalitpur. Click [here](#) to see the location.";
+        output = "We are located at Tahachal, Kathmandu, Nepal. Click [here](#) to see the location.";
     } else if (input.includes("your number") || input.includes("your phone number")) {
-        output = "+977 9828711925";
+        output = "+977 980-1238675";
+    } else if (input.includes("email") || input.includes("your email") || input.includes("gmail")) {
+        output = "You can reach us at bakerythirdeye@gmail.com.";
     } else if (input.includes("bakery menu") || input.includes("bakery items") || input.includes("bakery")) {
         output = `Welcome to Third Eye Bakery! Here is our bakery menu:
-        - Croissant: Rs 50
-        - Muffin: Rs 80
-        - Baguette: Rs 100
-        - Brownie: Rs 70
-        - Donut: Rs 60
-        - Cupcake: Rs 90
+        - Croissant
+        - Muffin
+        - Baguette
+        - Brownie
+        - Donut
+        - Cupcake
+        - Bun
+        - Carpathian
+        - Poster
+        - Moule
+        - Cake
+        - Plum Cake
         What would you like to order, sir/madam?`;
     } else {
-        for (let item in menu) {
-            if (input.includes(item)) {
-                output = menu[item];
-                break;
-            }
-        }
         for (let item in bakeryMenu) {
             if (input.includes(item)) {
                 output = bakeryMenu[item];
@@ -91,6 +99,7 @@ function chatbot(input) {
     }
     return output;
 }
+
 
 // Display user message in the chat
 function displayUserMessage(message) {
